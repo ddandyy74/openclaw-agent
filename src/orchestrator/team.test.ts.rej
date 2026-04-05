@@ -1,0 +1,11 @@
+--- src/orchestrator/team.test.ts
++++ src/orchestrator/team.test.ts
+@@ -261,7 +261,8 @@ describe(\ Team\, () => {
+     beforeEach(async () => {
+       const teamInfo = await team.createTeam(\Test Team\, \teammate\, { consensusThreshold: 0.8 });
+       teamId = teamInfo.id;
+       await team.addMember(teamId, \agent-1\);
+       await team.addMember(teamId, \agent-2\);
++      await team.addMember(teamId, \agent-3\);
+ 
+       const decision = await team.proposeDecision(teamId, \Test proposal\, \agent-1\);
